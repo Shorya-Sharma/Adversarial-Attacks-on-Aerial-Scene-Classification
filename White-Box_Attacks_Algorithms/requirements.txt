@@ -1,0 +1,9 @@
+flake8==3.8.2
+black==19.10b0
+pytest==5.4.1
+pytest-cov==2.8.1
+coverage==5.1
+codecov==2.0.15
+coveralls==1.10.0
+mypy==0.770
+pre-commit==2.3.0
