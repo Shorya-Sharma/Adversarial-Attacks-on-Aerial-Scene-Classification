@@ -1,0 +1,2 @@
+Jupyter[[:space:]]Notebooks filter=lfs diff=lfs merge=lfs -text
+jup filter=lfs diff=lfs merge=lfs -text
