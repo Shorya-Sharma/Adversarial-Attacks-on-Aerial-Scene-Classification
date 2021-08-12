@@ -2,3 +2,5 @@ Jupyter[[:space:]]Notebooks filter=lfs diff=lfs merge=lfs -text
 jup filter=lfs diff=lfs merge=lfs -text
 Jupyter_Notebooks filter=lfs diff=lfs merge=lfs -text
 Confusion[[:space:]]Matrix filter=lfs diff=lfs merge=lfs -text
+White-Box_Attacks_Algorithms filter=lfs diff=lfs merge=lfs -text
+White-Box-Adversarial-Attack-Algorithms filter=lfs diff=lfs merge=lfs -text
