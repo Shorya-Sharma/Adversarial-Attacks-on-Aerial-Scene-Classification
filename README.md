@@ -51,225 +51,138 @@ The datasets that were used for the study were:
 
 ## Results
 
-A.	White-Box Attacks
+### A.	White-Box Attacks
 
-1)	NWPU-RESIC45
+#### 1) NWPU-RESIC45
 
-•	Epsilon: 0.0005
+- Epsilon: 0.0005
 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438238-814f3941-365c-409e-9874-f60394b4d7b1.png">
 </p>
 
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438274-066a3a80-8bf7-416c-b71e-1a792cc59427.png">
+</p>
+<div align="center">
+  Confusion Matrix for Virtual Adversarial Attack on AlexNet
+</div>
 
 
+- Epsilon: 1.0
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438475-7f39c0bb-c350-499f-866a-73d6d6174d41.png">
+</p>
 
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438483-214597e9-5d3f-47f4-bda4-fafe1cbbfd87.png">
+</p>
+<div align="center">
+  Confusion Matrix for Newton Fool Attack on DenseNet121
+</div>
 
 
+#### 2) UC Merced Land Use Dataset
 
+- Epsilon: 0.0005
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438564-c5d2e809-53ad-4312-a049-dd04c71e742e.png">
 
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438581-c438affc-f453-4036-b601-de3b36f6cd20.png">
+</p>
+<div align="center">
+  Confusion Matrix for PGD Attack on MobileNet
+</div>
 
 
+- Epsilon: 1.0
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438599-d78519c1-f0a3-4be3-804a-35a938be9573.png">
+</p>
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438617-656625a4-58ef-4277-84fc-2f71ce66b39a.png">
+</p>
+<div align="center">
+  Confusion Matrix for L2-Projected Gradient Descent Attack on AlexNet
+</div>
 
 
+### B. Transferable Sparse Adversarial Attack
 
+#### 1) NWPU-RESIC45
 
+- Epsilon: 0.0005
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438662-7584732f-2075-4f95-a821-b895d5c9b91d.png">
+</p>
 
-Confusion Matrix for Virtual Adversarial Attack on AlexNet
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438674-25a7853e-94c0-430d-9faa-b7231efa90ac.png">
+</p>
+<div align="center">
+  Confusion Matrix for ResNet101 Generator Attack on ResNet50
+</div>
 
 
+- Epsilon: 1.0
 
-•	Epsilon: 1.0
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129439085-4f90bfb0-1205-49cd-9897-3b293108cc81.png">
+</p>
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129439097-b575991a-ac5a-43f8-befb-6ead6730bae1.png">
+</p>
+<div align="center">
+  Confusion Matrix for ResNet101 Generator Attack on ResNet50
+</div>
 
 
+#### 2) UC Merced Land Use Dataset
 
+- Epsilon: 0.0005
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438716-27c7de4c-6000-4da6-8589-1efce9bee919.png">
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438720-4ee01b53-19ab-4e54-86b9-24f0e0db4db1.png">
+</p>
+<div align="center">
+   Confusion Matrix for MobileNetV2 Generator Attack on ResNet101
+</div>
 
 
+- Epsilon: 1.0
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129438732-d2a456dd-e3fe-4f3b-9aeb-7be4bf293f99.png">
+</p>
 
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/68850685/129439045-26cd9a94-fbbd-4449-9a01-07d2c9201949.png">
+</p>
+<div align="center">
+   Confusion Matrix for ResNet50 Generator Attack on ResNet50
+</div>
 
 
+## Observations
+Following Observations were made on the basis of the experiments conducted in the above study:
+- On NWPU-RESIC45, the highest drop in accuracy was observed when Virtual Adversarial Attack (75.23%) and Newton Fool Attack (44.67%) were deployed under eps= 0.0005 and eps=1.0 respectively. to create adversarial examples on the AlexNet and DenseNet respectively.
+- When TSAA was executed on NWPU dataset, highest fooling rate was 9.30% when the generator was trained on ResNet101 architecture and the adversarial examples were created using the ResNet50 model under eps=0.0005 and 3.3% when the generator was trained on ResNet101 architecture and the adversarial examples were created using the ResNet50 model under eps=1.0
+- On UC Merced Dataset, the highest drop in accuracy was observed when L2 Projected Gradient Descent Attack (4.01%) and PGD Attack (98.24%) were deployed under eps= 0.0005 and eps=1.0 respectively. to create adversarial examples on the AlexNet and MobileNetV2 respectively.
+- When TSAA was executed on UC Merced dataset, highest fooling rate was 15.27% when the generator was trained on MobileNetV2 architecture and the adversarial examples were created using the ResNet101 model under eps=0.0005 and 6.44% when the generator was trained on ResNet50 architecture and the adversarial examples were created using the ResNet50 model under eps=1.0
 
 
-
-
-
-
-
-
-
-
-Confusion Matrix for Newton Fool Attack on DenseNet121
-
-
-
-
-2)	UC Merced Land Use Dataset
-
-•	Epsilon: 0.0005
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Confusion Matrix for PGD Attack on MobileNetV2
-
-
-
-•	Epsilon: 1.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                           Confusion Matrix for L2-Projected Gradient Descent Attack on AlexNet
-
-
-
-
-B.	Transferable Sparse Adversarial Attack (Black-Box Adversarial Attack)
-
-1)	NWPU-RESIC45
-
-•	Epsilon: 0.0005
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                Confusion Matrix for ResNet101 Generator Attack on ResNet50
-
-
-
-
-•	Epsilon: 1.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                   Confusion Matrix for ResNet101 Generator Attack on ResNet50
- 
-
-
-2)	UC Merced Land Use Dataset
-
-•	Epsilon: 0.0005
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                  Confusion Matrix for MobileNetV2 Generator Attack on ResNet101
- 
-
-
-
-•	Epsilon: 1.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      Confusion Matrix for ResNet50 Generator Attack on ResNet50
 
