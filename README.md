@@ -1,5 +1,5 @@
 # Adversarial-Attacks-on-Aerial-Scene-Classification
-This repository contains the code and results for the project titled **Adversarial Attacks on Aerial Scene Classification** that I accomplished during my summer research internship at **VIGIL Lab**, **IIT Hyderabad** under the guidance of Prof. C. Krishna Mohan
+This repository contains the code and results for the project titled **Adversarial Attacks on Aerial Scene Classification** that I accomplished during my summer research internship at **Pattern Recognition Lab**, **University of Erlangen-Nuremberg** under the guidance of Prof. Andreas Maier
 
 ## Our Contributions
 - We implemented white-box adversarial attacks using 5 different neural network
